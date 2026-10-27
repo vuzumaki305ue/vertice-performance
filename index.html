@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080a0e" />
+  <meta name="description" content="Vértice Performance — conceito visual de uma oficina de preparação automotiva. Projeto demonstrativo para portfólio." />
+  <title>Vértice — Performance sem concessões.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>
+    // Evita exibir a animação para quem prefere menos movimento.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        (!location.hash || location.hash === '#inicio')) {
+      document.documentElement.classList.add('intro-ready');
+    }
+  </script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <!-- Abertura cinematográfica original, inspirada no ritmo do vídeo de referência. -->
+  <div class="cinematic-intro" id="cinematicIntro" aria-label="Abertura da Vértice Performance">
+    <div class="cinematic-intro__grid" aria-hidden="true"></div>
+    <div class="cinematic-intro__beam" aria-hidden="true"></div>
+    <div class="cinematic-intro__haze" aria-hidden="true"></div>
+    <div class="cinematic-intro__top" aria-hidden="true"><span>VP / PERFORMANCE DIVISION</span><span>00 — INTRO</span></div>
+    <div class="cinematic-intro__vehicle" aria-hidden="true">
+      <img src="assets/coupe-intro.svg" alt="" fetchpriority="high" />
+    </div>
+    <div class="cinematic-intro__speed" aria-hidden="true"></div>
+    <div class="cinematic-intro__copy" aria-hidden="true">
+      <div class="cinematic-intro__eyebrow"><span class="cinematic-intro__dot"></span> A PERFORMANCE COMEÇA AQUI</div>
+      <strong>VÉRTICE<span>.</span></strong>
+      <p>SEM LIMITES. SEM CONCESSÕES.</p>
+    </div>
+    <div class="cinematic-intro__bottom">
+      <span class="cinematic-intro__caption">ENGINEERED TO FEEL DIFFERENT</span>
+      <span class="cinematic-intro__track" aria-hidden="true"><i></i></span>
+      <button type="button" class="cinematic-intro__skip" id="skipIntro">PULAR INTRO <span>↗</span></button>
+    </div>
+  </div>
+  <div class="progress-line" id="progressLine" aria-hidden="true"></div>
+  <div class="pointer-glow" id="pointerGlow" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Vértice Performance — início">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 44 44" width="44" height="44" fill="none"><path d="M4 10h10l8 17 8-17h10L22 40 4 10Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M22 2v12" stroke="#4C9DFF" stroke-width="3"/></svg></span>
+        <span class="brand-type">VÉRTICE<span>PERFORMANCE DIVISION</span></span>
+      </a>
+      <nav class="nav-links" id="mainNav" aria-label="Navegação principal">
+        <a href="#especialidades">ESPECIALIDADES</a>
+        <a href="#projetos">PROJETOS</a>
+        <a href="#filosofia">NOSSA VISÃO</a>
+        <a href="#contato" class="mobile-nav-cta">ENTRE EM CONTATO ↗</a>
+      </nav>
+      <a href="#contato" class="nav-cta"><span>FALE COM A EQUIPE</span><span class="arrow-symbol">↗</span></a>
+      <button class="menu-toggle" type="button" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-halo" aria-hidden="true"></div>
+      <div class="hero-photo" role="img" aria-label="Carro esportivo japonês com faróis azuis em ambiente noturno"></div>
+      <div class="hero-photo-shade" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="eyebrow hero-eyebrow enter-up"><span class="eyebrow-line"></span> ENGINEERED TO FEEL DIFFERENT <span class="tiny-cross">✳</span> 001 / 004</div>
+        <h1 id="hero-title" class="hero-title enter-up delay-1">NÃO EXISTE<br><span class="title-light">LIMITE PARA</span><br><span class="title-accent">EVOLUIR<span class="hero-period">.</span></span></h1>
+        <p class="hero-intro enter-up delay-2">Precisão na engenharia. Alma nas ruas.<br>Performance para quem nasceu para ir além.</p>
+        <div class="hero-actions enter-up delay-3">
+          <a class="btn btn-blue" href="#projetos">EXPLORAR PROJETOS <span>↗</span></a>
+          <a class="text-link" href="#especialidades">CONHEÇA A VÉRTICE <span>↗</span></a>
+        </div>
+        <button type="button" class="hero-replay" id="replayIntro" aria-label="Rever animação de abertura"><span aria-hidden="true">↺</span> REVER ABERTURA</button>
+      </div>
+      <div class="hero-bottom container">
+        <div class="side-note"><span class="small-square"></span> UM CONCEITO AUTOMOTIVO <span class="side-note-divider">/</span> DESDE O PRIMEIRO PIXEL</div>
+        <a class="scroll-cue" href="#especialidades">DESÇA PARA EXPLORAR <span class="scroll-line"></span><span>↓</span></a>
+      </div>
+      <span class="hero-watermark" aria-hidden="true">NO LIMITS.</span>
+    </section>
+
+    <section class="intro section-pad" id="especialidades" aria-labelledby="intro-title">
+      <div class="container">
+        <div class="section-top reveal"><span class="kicker">01 / ESPECIALIDADES</span><span class="section-top-right">DO ORIGINAL AO EXTRAORDINÁRIO. <span class="sparkle">✳</span></span></div>
+        <div class="intro-head">
+          <h2 id="intro-title" class="display-title reveal">NÃO É SÓ SOBRE<br><em>VELOCIDADE.</em></h2>
+          <div class="intro-right reveal"><span class="mark-star">✳</span><p>É sobre a conexão entre máquina e piloto. Cada detalhe importa, do primeiro aperto de parafuso à última curva.</p></div>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <div class="service-top"><span>01 / MOTOR</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><rect x="11" y="18" width="34" height="24" rx="4" stroke="currentColor" stroke-width="1.5"/><path d="M18 18v-7h19v7M17 42v5h23v-5M5 24h6M45 24h6M5 36h6M45 36h6M20 24l7 7-4 6 13-12-6-5" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>PREPARAÇÃO<br>DE MOTOR</h3><p>Conceitos de acerto, resposta, potência e confiabilidade para cada objetivo.</p><span class="service-arrow">↗</span>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay:90ms">
+            <div class="service-top"><span>02 / CONTROLE</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><circle cx="28" cy="28" r="18" stroke="currentColor" stroke-width="1.5"/><circle cx="28" cy="28" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M10 27h13M33 27h13M25 33l-5 12M31 33l5 12" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>DINÂMICA<br>VEICULAR</h3><p>Suspensão, geometria e equilíbrio para transformar intenção em trajetória.</p><span class="service-arrow">↗</span>
+          </article>
+          <article class="service-card reveal" style="--reveal-delay:180ms">
+            <div class="service-top"><span>03 / IDENTIDADE</span><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><path d="m12 32 5-13 11-6 11 6 5 13-16 11-16-11Z" stroke="currentColor" stroke-width="1.5"/><path d="M17 19 28 29l11-10M28 29v14M12 32l16-3 16 3" stroke="currentColor" stroke-width="1.5"/></svg></div>
+            <h3>ESTÉTICA<br>& PERSONALIZAÇÃO</h3><p>Uma presença impossível de confundir. Forma e função na mesma direção.</p><span class="service-arrow">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" aria-label="Manifesto Vértice">
+      <div class="manifesto-image" aria-hidden="true"></div>
+      <div class="manifesto-overlay"></div>
+      <div class="container manifesto-content">
+        <div class="manifesto-top"><span class="kicker">BUILT NOT BOUGHT</span><span>VÉRTICE / 002</span></div>
+        <p class="manifesto-line reveal">NÃO SE TRATA<br>DE <span>TER</span> O MELHOR.</p>
+        <p class="manifesto-line manifesto-line-second reveal">SE TRATA DE<br><em>CONSTRUIR</em> O SEU.</p>
+        <div class="manifesto-foot"><span>NA BUSCA DO PRÓXIMO NÍVEL.</span><span class="manifesto-cross">✳</span></div>
+      </div>
+    </section>
+
+    <section class="projects section-pad" id="projetos" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-top reveal"><span class="kicker">02 / GALERIA</span><span class="section-top-right">CONCEITOS VISUAIS / 2026</span></div>
+        <div class="projects-heading">
+          <h2 class="display-title reveal" id="projects-title">FEITOS PARA<br><em>SE DESTACAR.</em></h2>
+          <p class="reveal">Três conceitos, três personalidades. Uma mesma obsessão por detalhes.</p>
+        </div>
+        <div class="filter-row reveal" role="group" aria-label="Filtrar projetos">
+          <button type="button" class="filter active" data-filter="todos" aria-pressed="true">TODOS <span>03</span></button>
+          <button type="button" class="filter" data-filter="rua" aria-pressed="false">STREET</button>
+          <button type="button" class="filter" data-filter="pista" aria-pressed="false">TRACK</button>
+          <button type="button" class="filter" data-filter="estetica" aria-pressed="false">STYLE</button>
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <button type="button" class="project-card project-card-wide reveal" data-category="rua" data-project="0" aria-label="Ver detalhes do projeto conceito Midnight 01">
+            <span class="project-media media-midnight"></span><span class="project-overlay"></span><span class="project-pill">STREET / 01</span><span class="project-bottom"><span><small>CONCEITO 001 / BLUE HOUR</small><strong>MIDNIGHT 01</strong></span><span class="project-open">↗</span></span>
+          </button>
+          <button type="button" class="project-card reveal" style="--reveal-delay:100ms" data-category="pista" data-project="1" aria-label="Ver detalhes do projeto conceito Apex R">
+            <span class="project-media media-apex"></span><span class="project-overlay"></span><span class="project-pill">TRACK / 02</span><span class="project-bottom"><span><small>CONCEITO 002 / PURE DRIVE</small><strong>APEX R</strong></span><span class="project-open">↗</span></span>
+          </button>
+          <button type="button" class="project-card reveal" style="--reveal-delay:160ms" data-category="estetica" data-project="2" aria-label="Ver detalhes do projeto conceito Blue Motion">
+            <span class="project-media media-motion"></span><span class="project-overlay"></span><span class="project-pill">STYLE / 03</span><span class="project-bottom"><span><small>CONCEITO 003 / NIGHT RUN</small><strong>BLUE MOTION</strong></span><span class="project-open">↗</span></span>
+          </button>
+        </div>
+        <div class="projects-note reveal"><span>* As imagens ilustram possibilidades de design. Não representam serviços ou projetos realizados por uma empresa real.</span><span>↓ CONTINUE EXPLORANDO</span></div>
+      </div>
+    </section>
+
+    <section class="vision section-pad" id="filosofia" aria-labelledby="vision-title">
+      <div class="container vision-layout">
+        <div class="vision-left"><span class="kicker reveal">03 / NOSSA FILOSOFIA</span><h2 class="display-title reveal" id="vision-title">OBSESSÃO<br>POR CADA<br><em>DETALHE.</em></h2><div class="vision-disc reveal" aria-hidden="true"><div class="disc-ring"><span>VÉRTICE · PERFORMANCE · VÉRTICE · PERFORMANCE ·</span></div><span class="disc-cross">✳</span></div></div>
+        <div class="vision-right"><p class="vision-lead reveal">Performance não acontece por acaso. É uma soma de decisões bem tomadas.</p><div class="vision-list"><div class="vision-list-item reveal"><span>01</span><div><strong>ENTENDER</strong><p>Primeiro, definimos o propósito de cada projeto.</p></div><span>↗</span></div><div class="vision-list-item reveal"><span>02</span><div><strong>PROJETAR</strong><p>Depois, alinhamos escolhas técnicas e identidade.</p></div><span>↗</span></div><div class="vision-list-item reveal"><span>03</span><div><strong>EVOLUIR</strong><p>O resultado é uma experiência que vai além dos números.</p></div><span>↗</span></div></div></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contact-title">
+      <div class="contact-glow" aria-hidden="true"></div>
+      <div class="container contact-layout">
+        <div class="contact-copy"><span class="kicker reveal">04 / PRÓXIMA ETAPA</span><h2 class="display-title reveal" id="contact-title">SUA IDEIA.<br><em>NOSSA PRÓXIMA</em><br>OBSESSÃO.</h2><p class="reveal">Este é um protótipo de portfólio. Preencha para testar a experiência de contato — nenhuma mensagem será enviada.</p><div class="contact-meta reveal"><span>MODELO DE SITE INSTITUCIONAL</span><span>DEMONSTRAÇÃO / V1.0</span></div></div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-head"><span>SIMULE SEU CONTATO</span><span>↗</span></div>
+          <label for="nome">SEU NOME</label><input id="nome" name="nome" type="text" placeholder="Como podemos te chamar?" maxlength="70" required autocomplete="name" />
+          <label for="objetivo">O QUE VOCÊ TEM EM MENTE?</label><select id="objetivo" name="objetivo" required><option value="" selected disabled>Selecione o assunto</option><option>Preparação de motor</option><option>Dinâmica veicular</option><option>Estética e personalização</option><option>Outro projeto</option></select>
+          <label for="mensagem">CONTE UM POUCO MAIS</label><textarea id="mensagem" name="mensagem" rows="3" placeholder="Descreva sua ideia..." maxlength="1000" required></textarea>
+          <button class="btn btn-blue form-submit" type="submit">GERAR MENSAGEM DE EXEMPLO <span>↗</span></button>
+          <div class="form-result" id="formResult" hidden><p><strong>Mensagem gerada!</strong> Este é apenas um teste. Copie o texto se quiser.</p><pre id="messagePreview"></pre><button class="copy-btn" type="button" id="copyBtn">COPIAR TEXTO</button></div>
+          <small>Protótipo demonstrativo: sem envio ou armazenamento de dados.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a href="#inicio" class="footer-logo">VÉRTICE<span>PERFORMANCE</span></a><p>ENGINEERED TO FEEL DIFFERENT.</p><a href="#inicio" class="to-top">VOLTAR AO TOPO ↑</a></div><div class="container footer-bottom"><span>© 2026 VÉRTICE — MARCA FICTÍCIA.</span><span>PROJETO DE ESTUDO / NÃO É UMA OFICINA REAL.</span><span>DESIGNED WITH INTENTION.</span></div></footer>
+
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true" hidden>
+    <div class="modal-backdrop" data-close="true"></div><div class="modal-panel" tabindex="-1"><button type="button" class="modal-close" id="modalClose" aria-label="Fechar detalhes do projeto">×</button><div class="modal-photo" id="modalPhoto"></div><div class="modal-info"><span class="kicker" id="modalTag"></span><h2 id="modalTitle"></h2><p id="modalDescription"></p><span class="modal-disclaimer">CONCEITO FICTÍCIO PARA FINS DE PORTFÓLIO.</span></div></div>
+  </div>
+</body>
+</html>
